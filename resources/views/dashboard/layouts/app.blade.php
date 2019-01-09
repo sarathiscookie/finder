@@ -9,14 +9,16 @@
 
     <title>{{ config('app.name') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- Styles -->
+    <!-- Default laravel Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Default laravel Styles -->
+    <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
+
+    <!-- Each page Styles -->
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
 </head>
 
@@ -134,9 +136,18 @@
     </div>
 </div>
 
+<!-- Default laravel Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+
+<!-- Plugins Scripts -->
+<script src="{{ asset('js/plugins.js') }}"></script>
+
+<!-- Each page Scripts -->
 <script src="{{ asset('js/all.js') }}"></script>
+
 </body>
 
 </html>

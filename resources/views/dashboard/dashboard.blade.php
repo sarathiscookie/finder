@@ -18,13 +18,21 @@
             <div class="card-body">
 
                 <form>
+                    @csrf
                     <div class="row">
                         <div class="col">
                             <input type="text" class="form-control" placeholder="Keyword">
                         </div>
 
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Country">
+                            <select class="form-control" id="country">
+                                <option>Choose Country</option>
+                                @isset($countries)
+                                    @foreach ($countries as $key => $country)
+                                        <option>{{ $country }}</option>
+                                    @endforeach
+                                @endisset
+                            </select>
                         </div>
 
                         <div class="col">
