@@ -17,7 +17,8 @@ mix.js('resources/js/app.js', 'public/js')
 
 // Each page css and js files
 mix.styles([
-    'resources/css/select2.min.css'
+    'resources/css/select2.min.css',
+    'resources/css/select2-bootstrap.css',
 ], 'public/css/plugins.css');
 
 mix.scripts([

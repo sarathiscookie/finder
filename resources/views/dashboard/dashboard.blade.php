@@ -20,13 +20,13 @@
                 <form>
                     @csrf
                     <div class="row">
-                        <div class="col">
+                        <div class="col-md-3">
                             <input type="text" class="form-control" placeholder="Keyword">
                         </div>
 
-                        <div class="col">
+                        <div class="col-md-3">
                             <select class="form-control" id="country">
-                                <option>Choose Country</option>
+                                <option></option>
                                 @isset($countries)
                                     @foreach ($countries as $key => $country)
                                         <option>{{ $country }}</option>
@@ -35,11 +35,11 @@
                             </select>
                         </div>
 
-                        <div class="col">
+                        <div class="col-md-3">
                             <input type="text" class="form-control" placeholder="Language">
                         </div>
 
-                        <div class="col">
+                        <div class="col-md-3">
                             <button type="button" class="btn btn-primary">Primary</button>
                         </div>
                     </div>
