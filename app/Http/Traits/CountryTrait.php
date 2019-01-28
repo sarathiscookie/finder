@@ -1,11 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Traits;
 
-use Illuminate\Http\Request;
-
-class KeywordSearchController extends Controller
-{
+trait CountryTrait {
     public function getCountry() {
         $countryName = [];
         $str         = file_get_contents(storage_path('app/public/json/country.json'));

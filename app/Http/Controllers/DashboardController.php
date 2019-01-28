@@ -4,17 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Traits\CountryTrait;
+
 class DashboardController extends Controller
 {
+    use CountryTrait;
     /**
      * Display a listing of the resource.
      *
-     * @param \App\Http\Controllers\KeywordSearchController $keywordSearch;
      * @return \Illuminate\Http\Response
      */
-    public function index(KeywordSearchController $keywordSearch)
+    public function index()
     {
-        $countries = $keywordSearch->getCountry();
+        $countries = $this->getCountry();
         return view('dashboard.dashboard', ['countries' => $countries]);
     }
 
